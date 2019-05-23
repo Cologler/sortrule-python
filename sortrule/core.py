@@ -9,7 +9,6 @@ from .nodeset import KeySelectorBuilder
 
 class SortRules:
     def __init__(self):
-        self._data = {}
         self._selector_builder = KeySelectorBuilder()
         self._cached_key = None
 
