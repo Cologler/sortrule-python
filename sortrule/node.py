@@ -7,15 +7,6 @@
 
 from .abc import INode, INodeSet, IReadonlyNode, IOrderCodeCache
 
-class CachedNode(IReadonlyNode):
-    __slots__ = ('_node', '_value')
-
-    def __init__(self, node):
-        self._node = node
-
-    def get_order_code(self, cache: IOrderCodeCache):
-        return cache.get_order_code(self._node)
-
 
 class SortRuleNode(INode):
     __slots__ = ('_node_set', '_before_me')

@@ -64,3 +64,8 @@ class MixDict(MutableMapping):
 
     def __len__(self):
         return len(self._d) + len(self._k)
+
+    def copy(self):
+        md = MixDict()
+        md.update(self)
+        return md
